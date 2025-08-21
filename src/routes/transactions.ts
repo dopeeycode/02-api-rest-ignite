@@ -96,6 +96,12 @@ export async function transactionRoutes(app: FastifyInstance) {
         })
         .first()
 
+      if (!transaction) {
+        return reply.status(404).send({
+          message: 'Nenhuma transação encontrada com esse ID!',
+        })
+      }
+
       return reply.send({
         transactions: transaction,
       })
