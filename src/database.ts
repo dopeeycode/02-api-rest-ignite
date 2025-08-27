@@ -1,4 +1,4 @@
-import 'dotenv/config'
+// database.ts
 import { knex as setupKnex, Knex } from 'knex'
 import { env } from './env'
 

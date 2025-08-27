@@ -109,7 +109,7 @@ export async function transactionRoutes(app: FastifyInstance) {
       }
 
       return reply.send({
-        transactions: transaction,
+        transaction,
       })
     },
   )
