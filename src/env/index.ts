@@ -7,13 +7,11 @@ if (process.env.NODE_ENV === 'test') {
   config()
 }
 
-console.log('NODE_ENV:', process.env.NODE_ENV)
-console.log('DATABASE_URL:', process.env.DATABASE_URL)
-
 const envSchama = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('production'),
+  DATABASE_CLIENT: z.enum(['sqlite', 'pg']),
   DATABASE_URL: z.string(),
-  PORT: z.number().default(3333),
+  PORT: z.coerce.number().default(3333),
 })
 
 const _env = envSchama.safeParse(process.env)

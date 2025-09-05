@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
@@ -13,6 +16,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "dotenv": "^17.2.1",
+    "fastify": "^5.5.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "sqlite3": "^5.1.7",
+    "zod": "^4.0.17"
+  },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^24.3.0",
@@ -23,13 +35,5 @@
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^11.0.2",
-    "dotenv": "^17.2.1",
-    "fastify": "^5.5.0",
-    "knex": "^3.1.0",
-    "sqlite3": "^5.1.7",
-    "zod": "^4.0.17"
   }
 }
